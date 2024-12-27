@@ -1,1 +1,0 @@
-/home/bun/ros2_7bai_ws/src/mypkg/launch/talk_listen.launch.py
