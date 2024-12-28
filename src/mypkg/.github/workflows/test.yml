@@ -8,8 +8,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build and Test
         run: |
-          rsync -av --exclude='.git' ./ /root/ros2_7bai_ws/src/mypkg/
-          cd /root/ros2_7bai_ws
+          rsync -av ./ /root/ros2_ws/src/mypkg/
+          cd /root/ros2_ws
           source /opt/ros/humble/setup.bash
           colcon build
           source install/setup.bash
