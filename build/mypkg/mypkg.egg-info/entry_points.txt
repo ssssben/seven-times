@@ -1,0 +1,4 @@
+[console_scripts]
+answer = mypkg.answer:main
+number = mypkg.number:main
+
