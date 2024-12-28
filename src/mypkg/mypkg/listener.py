@@ -2,10 +2,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
-class Answer(Node):
+class Listener(Node):
     def __init__(self):
-        super().__init__("answer")
-        self.sub = self.create_subscription(String, "chatter", self.cb, 10)
+        super().__init__("listener")
+        self.sub = self.create_subscription(String, "countup", self.cb, 10)
     def cb(self, msg):
         try:
             received_value = int(msg.data)
@@ -16,5 +16,5 @@ class Answer(Node):
 
 def main():
     rclpy.init()
-    node = Answer()
+    node = Listener()
     rclpy.spin(node)

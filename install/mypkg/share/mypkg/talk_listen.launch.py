@@ -6,14 +6,14 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    number = launch_ros.actions.Node(
+    talker = launch_ros.actions.Node(
         package = 'mypkg',
-        executable = 'number',
+        executable = 'talker',
     )
-    answer = launch_ros.actions.Node(
+    listener = launch_ros.actions.Node(
         package = 'mypkg',
-        executable = 'answer',
+        executable = 'listener',
         output = 'screen',
     )
 
-    return launch.LaunchDescription([number, answer])
+    return launch.LaunchDescription([talker, listener])

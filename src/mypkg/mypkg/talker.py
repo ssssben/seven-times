@@ -2,10 +2,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
-class Number(Node):
+class Talker(Node):
     def __init__(self):
-        super().__init__("number")
-        self.pub = self.create_publisher(String, "chatter", 10)
+        super().__init__("talker")
+        self.pub = self.create_publisher(String, "countup", 10)
         self.create_timer(1.0, self.timer_callback)
         self.count = 0
 
@@ -18,5 +18,5 @@ class Number(Node):
 
 def main():
     rclpy.init()
-    node = Number()
+    node = Talker()
     rclpy.spin(node)
