@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer='bun',
     maintainer_email='vlongbf@gmail.com',
-    description='ROS2の練習用',
+    description='数字を7倍',
     license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
